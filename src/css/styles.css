@@ -68,6 +68,37 @@ header div#burger.burger--active div.bar:nth-child(3) {
     transform: translateY(-8px) rotate(45deg);
 }
 
+section#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 21vh 0;
+}
+section#hero::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../imgs/bg.webp");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(7px) grayscale(80%);
+}
+section#hero h1 {
+    font-size: 3em;
+    color: #ffffff;
+}
+section#hero img {
+    width: 200px;
+    height: 200px;
+    margin: 40px 0;
+}
+
 /* Responsive */
 @media only screen and (max-width: 1024px) {
 
@@ -75,7 +106,6 @@ header div#burger.burger--active div.bar:nth-child(3) {
 @media only screen and (max-width: 950px) {
     header ul {
         display: none;
-        opacity: 0;
         transform: translateX(-500px);
     }
     header div#burger {
@@ -111,10 +141,36 @@ header div#burger.burger--active div.bar:nth-child(3) {
     header ul.nav--active {
         top: 16vh;
     }
+
+    section#hero {
+        padding: 27vh 0;
+    }
+    section#hero::before {
+        background-position: left;
+    }
+    section#hero h1 {
+        font-size: 2.5em;
+    }
+    section#hero img {
+        width: 150px;
+        height: 150px;
+    }
 }
 @media only screen and (max-width: 480px) {
     header ul.nav--active {
         top: 19vh;
+    }
+
+    section#hero {
+        padding: 25.8vh 0;
+    }
+    section#hero h1 {
+        font-size: 2em;
+        text-align: center;
+    }
+    section#hero img {
+        width: 150px;
+        height: 150px;
     }
 }
 
