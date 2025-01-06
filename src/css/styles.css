@@ -91,7 +91,7 @@ header div#burger.burger--active div.bar:nth-child(3) {
         text-align: center;
         padding: 20px 0;
         left: 0;
-        top: 14.5vh;
+        top: 11vh;
         border-top: #ffffff 2px solid;
         background-color: #1f1f1f;
         animation: fadeIn 0.5s ease-in-out forwards;
@@ -108,10 +108,14 @@ header div#burger.burger--active div.bar:nth-child(3) {
     }
 }
 @media only screen and (max-width: 768px) {
-
+    header ul.nav--active {
+        top: 16vh;
+    }
 }
 @media only screen and (max-width: 480px) {
-
+    header ul.nav--active {
+        top: 19vh;
+    }
 }
 
 @keyframes fadeIn {
