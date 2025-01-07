@@ -47,6 +47,23 @@ header ul div.buttons a.button_header.button_discord {
 header ul div.buttons a.button_header.button_discord:hover {
     box-shadow: 0 0 20px rgba(114, 137, 218);
 }
+header ul div.connected_players {
+    display: flex;
+    margin-left: 40px;
+}
+header ul div.connected_players div.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #00ff00;
+    margin-right: 15px;
+    margin-top: 5px;
+    animation: online 2s infinite;
+}
+header ul div.connected_players p {
+    font-size: 1.2em;
+    color: #ffffff;
+}
 header div#burger {
     display: none;
 }
@@ -99,81 +116,7 @@ section#hero img {
     margin: 40px 0;
 }
 
-/* Responsive */
-@media only screen and (max-width: 1024px) {
-
-}
-@media only screen and (max-width: 950px) {
-    header ul {
-        display: none;
-        transform: translateX(-500px);
-    }
-    header div#burger {
-        display: block;
-    }
-    header ul.nav--active {
-        width: 100%;
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 20px 0;
-        left: 0;
-        top: 11vh;
-        border-top: #ffffff 2px solid;
-        background-color: #1f1f1f;
-        animation: fadeIn 0.5s ease-in-out forwards;
-    }
-    header ul.nav--active-closing {
-        animation: fadeOut 0.5s ease-in-out forwards;
-    }
-    header ul.nav--active li {
-        margin: 1.5vh 0;
-    }
-    header ul div.buttons {
-        margin-left: 0;
-        padding: 30px 0;
-    }
-}
-@media only screen and (max-width: 768px) {
-    header ul.nav--active {
-        top: 16vh;
-    }
-
-    section#hero {
-        padding: 27vh 0;
-    }
-    section#hero::before {
-        background-position: left;
-    }
-    section#hero h1 {
-        font-size: 2.5em;
-    }
-    section#hero img {
-        width: 150px;
-        height: 150px;
-    }
-}
-@media only screen and (max-width: 480px) {
-    header ul.nav--active {
-        top: 19vh;
-    }
-
-    section#hero {
-        padding: 25.8vh 0;
-    }
-    section#hero h1 {
-        font-size: 2em;
-        text-align: center;
-    }
-    section#hero img {
-        width: 150px;
-        height: 150px;
-    }
-}
-
+/* Animations */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -192,5 +135,19 @@ section#hero img {
     100% {
         opacity: 0;
         transform: translateX(-500px);
+    }
+}
+@keyframes online {
+    0% {
+        background-color: #00ff00;
+    }
+    25% {
+        background-color: #00ff00a4;
+    }
+    50% {
+        background-color: #00ff0056;
+    }
+    100% {
+        background-color: #00ff00;
     }
 }
