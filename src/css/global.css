@@ -14,3 +14,7 @@ body {
 a {
     transition: all 0.3s ease-in-out;
 }
+
+span.highlightning {
+    color: rgb(137, 0, 155);
+}

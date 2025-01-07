@@ -116,6 +116,41 @@ section#hero img {
     margin: 40px 0;
 }
 
+section#welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+}
+section#welcome h2 {
+    font-size: 2.5em;
+    color: #ffffff;
+}
+section#welcome p {
+    width: 50%;
+    font-size: 1.4em;
+    color: #ffffff;
+    margin: 40px 0;
+    text-align: center;
+}
+section#welcome div.logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+section#welcome div.logos img {
+    width: 50px;
+    height: 50px;
+    margin: 0 30px;
+    transition: all 0.3s ease-in-out;
+}
+section#welcome div.logos img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 /* Animations */
 @keyframes fadeIn {
     0% {
